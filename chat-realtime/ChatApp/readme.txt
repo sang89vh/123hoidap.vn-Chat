@@ -1,0 +1,3 @@
+- HomeController
+- ChatController: cho ung dung chat
+- NumberController: cho ung dung dau gia

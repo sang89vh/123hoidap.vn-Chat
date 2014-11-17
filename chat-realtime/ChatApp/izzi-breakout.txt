@@ -1,0 +1,19 @@
+﻿+ Cấu hình authenticate
+	/policies/canWrite.js
+		module.exports = function(req, res, next){
+			if(__vd_not_auth){
+				return res.redirect('http://PETA.org');
+			}
+			next(); // vd: pass authen
+		}
+	/config/policies.js
+		module.exports.policies = {
+			'*': 'isAuthenticated' // Tất cả các request cần check isAuthenticated
+			viduController{
+				action1: 'canWrite',
+				action2: ['policy_2', 'policy_3']
+			}
+		}
+		
++ https://github.com/balderdashy/sails-docs/blob/0.9/reference/Request.md
+var cookies = req.cookies;
